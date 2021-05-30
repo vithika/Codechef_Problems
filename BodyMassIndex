@@ -1,0 +1,62 @@
+You are given the height H (in metres) and mass M (in kilograms) of Chef. The Body Mass Index (BMI) of a person is computed as MH2.
+
+Report the category into which Chef falls, based on his BMI:
+
+Category 1: Underweight if BMI ≤18
+Category 2: Normal weight if BMI ∈{19, 20,…, 24}
+Category 3: Overweight if BMI ∈{25, 26,…, 29}
+Category 4: Obesity if BMI ≥30
+Input:
+The first line of input will contain an integer, T, which denotes the number of testcases. Then the testcases follow.
+Each testcase contains a single line of input, with two space separated integers, M,H, which denote the mass and height of Chef respectively.
+Output:
+For each testcase, output in a single line, 1,2,3 or 4, based on the category in which Chef falls.
+
+Constraints
+1≤T≤2∗104
+1≤M≤104
+1≤H≤102
+Its guaranteed that H2 divides M.
+Sample Input:
+3
+72 2
+80 2
+120 2
+Sample Output:
+1
+2
+4
+
+
+
+#include <stdio.h>
+
+int main() {
+    int t,m,h,c;
+   scanf("%d\n",&t);
+    while(t--)
+    {
+        scanf("%d%d",&m,&h);
+        c=m/(h*h);
+        if(c<=18)
+        {
+            printf("1\n");
+        }
+        else if(c>=19&&c<=24)
+        {
+            printf("2\n");
+        }
+        else if(c>=25&&c<=29)
+        {
+            printf("3\n");
+        }
+        else{
+            printf("4\n");
+        }
+    }
+   
+
+	return 0;
+}
+
+
