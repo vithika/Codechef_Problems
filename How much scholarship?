@@ -1,0 +1,47 @@
+
+The ZCO Scholarship Contest has just finished, and you finish with a rank of R. You know that Rank 1 to Rank 50 will get 100% scholarship on the ZCO exam fee and Rank 51 to Rank 100 will get 50% percentage scholarship on the ZCO exam fee. The rest do not get any scholarship.
+What percentage of scholarship will you get ?
+
+Input
+Input consist of single line of input containing one integer R.
+Output
+Output a single line containing one integer — the percentage of scholarship you will get.
+Constraints
+1≤R≤109
+Example Input 1
+49
+Example Output 1
+100
+Explanation 1
+Since 1≤49≤50, answer is 100 percentage scholarship.
+
+Example Input 2
+317
+Example Output 2
+0
+Explanation 2
+Since 317>100, you do not get any scholarship.
+
+
+#include <stdio.h>
+
+int main() {
+    int t,p;
+   scanf("%d\n",&t);
+    if((t>=1)&&(t<=50))
+    {
+        printf("100\n");
+    }
+    else if((t>=51)&&(t<=100))
+    {
+        printf("50\n");
+        
+    }
+    else printf("0\n");
+
+    
+	// your code goes here
+	return 0;
+}
+
+
