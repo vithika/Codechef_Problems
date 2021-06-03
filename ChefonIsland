@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+
+Suppose Chef is stuck on an island and currently he has x units of food supply and y units of water supply in total that he could collect from the island. He needs xr units of food supply and yr units of water supply per day at the minimal to have sufficient energy to build a boat from the woods and also to live for another day. Assuming it takes exactly D days to build the boat and reach the shore, tell whether Chef has the sufficient amount of supplies to be able to reach the shore by building the boat?
+
+Input:
+First line will contain T, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, five integers x,y,xr,yr,D.
+Output:
+For each testcase, output in a single line answer "YES" if Chef can reach the shore by building the boat and "NO" if not (without quotes).
+
+You may print each character of each string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+
+Constraints
+1≤T≤300
+1≤x,y≤100
+1≤xr,yr,D≤10
+Sample Input
+3
+4 2 1 1 1
+4 2 1 3 1
+4 2 4 2 2
+Sample Output:
+YES
+NO
+NO
+
+
+
+
+int main() {
+    int t,p,x,y,xr,yr,D,min,a,b;
+   scanf("%d\n",&t);
+    while(t--)
+    {
+        scanf("%d%d%d%d%d",&x,&y,&xr,&yr,&D);
+        a=x/xr;
+        b=y/yr;
+        if(a<b)
+        {
+            min=a;
+        }
+        else
+        {
+            min=b;
+        }
+        if(min<D)
+        {
+            printf("NO\n");
+        }
+        else
+        {
+            printf("YES\n");
+        }
+    
+    }
+   
+    
+	// your code goes here
+	return 0;
+}
+
+
