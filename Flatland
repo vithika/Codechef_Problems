@@ -1,0 +1,20 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+ while(t--)	{
+  int n,f,c=0;
+  cin>>n;
+  while(n>0){
+   f=floor(sqrt(n));
+   n=n-pow(f,2);
+   c++;
+  }
+  cout<<c<<"\n";
+ }
+	return 0;
+}
+
