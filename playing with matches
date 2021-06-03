@@ -1,0 +1,94 @@
+
+Chef's son Chefu found some matches in the kitchen and he immediately starting playing with them.
+
+The first thing Chefu wanted to do was to calculate the result of his homework — the sum of A and B, and write it using matches. Help Chefu and tell him the number of matches needed to write the result.
+
+Digits are formed using matches in the following way: 
+
+Input
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first and only line of each test case contains two space-separated integers A and B.
+Output
+For each test case, print a single line containing one integer — the number of matches needed to write the result (A+B).
+
+Constraints
+1≤T≤1,000
+1≤A,B≤106
+Example Input
+3
+123 234
+10101 1010
+4 4
+Example Output
+13
+10
+7
+#include <stdio.h>
+
+int main() {
+    int t,a,b,sum,output,rem,n;
+   scanf("%d\n",&t);
+   while(t--)
+   {
+       scanf("%d%d",&a,&b);
+       sum=a+b;
+       n=sum;
+       output=0;
+       while(sum!=0)
+       {
+           rem=sum%10;
+           sum=sum/10;
+           if(rem==1)
+           {
+               output=output+2;
+           }
+           else if(rem==0)
+           {
+               output=output+6;
+           }
+            else if(rem==2)
+           {
+               output=output+5;
+           }
+            else if(rem==3)
+           {
+               output=output+5;
+           }
+            else if(rem==4)
+           {
+               output=output+4;
+           }
+            else if(rem==5)
+           {
+               output=output+5;
+           }
+            else if(rem==6)
+           {
+               output=output+6;
+           }
+              else if(rem==7)
+           {
+               output=output+3;
+           }
+              else if(rem==8)
+           {
+               output=output+7;
+           }
+            else if(rem==9)
+           {
+               output=output+6;
+           }
+           
+       }
+       printf("%d\n",output);
+       
+   }
+    
+   
+     
+    
+	// your code goes here
+	return 0;
+}
+
+
