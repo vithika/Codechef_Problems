@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<math.h>
+int main() {
+   long long int t,p,sol,rem;
+   scanf("%lld\n",&t);
+    while(t--)
+    {
+       int sum=0;
+       scanf("%lld",&p);
+      while(p>0)
+      {
+          rem=p%10;
+          sum=(sum*10)+rem;
+       
+          p=p/10;
+          
+
+      }
+      printf("%lld\n",sum);
+        
+    }
+ 
+	// your code goes here
+	return 0;
+}
+
+
